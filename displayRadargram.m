@@ -26,7 +26,7 @@ function dB = displayRadargram(data)
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     delT = 0.0375;
     data = data / mean(mean(data));
-    dB = 10 * log10(data / mean(mean(data)));
+    dB = 10 * log10(data);
     [nrows, ncols] = size(data);
     y = (0:1:nrows-1)*delT;
     x = 0:1:ncols-1;
